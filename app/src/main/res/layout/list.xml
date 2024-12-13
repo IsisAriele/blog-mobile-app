@@ -66,6 +66,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginEnd="8dp"/>
 
+    <!-- Botão Cadastrar -->
+    <Button
+        android:id="@+id/btn_register"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Cadastrar"
+        android:backgroundTint="#1E90FF"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/et_search"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
     <!-- Primeiro Post -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/post1"
@@ -74,7 +88,7 @@
         android:layout_marginTop="16dp"
         android:background="#FFFFFF"
         android:padding="8dp"
-        app:layout_constraintTop_toBottomOf="@id/et_search"
+        app:layout_constraintTop_toBottomOf="@id/btn_register"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
@@ -83,24 +97,10 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:scaleType="centerCrop"
-
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             android:layout_marginEnd="8dp"/>
-
-        <TextView
-            android:id="@+id/tv_post_description1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry..."
-            android:textColor="#666666"
-            android:textSize="12sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@id/tv_post_title1"
-            app:layout_constraintTop_toBottomOf="@id/tv_post_author1" />
 
         <TextView
             android:id="@+id/tv_post_title1"
@@ -112,7 +112,6 @@
             android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@id/iv_post_image1"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -120,22 +119,11 @@
             android:id="@+id/tv_post_author1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
             android:text="João da Silva"
             android:textColor="#666666"
-            android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@id/tv_post_title1"
             app:layout_constraintTop_toBottomOf="@id/tv_post_title1" />
-
-        <ImageView
-            android:id="@+id/imageView9"
-            android:layout_width="110dp"
-            android:layout_height="101dp"
-            app:srcCompat="@drawable/mask_group__1_"
-            tools:layout_editor_absoluteX="-18dp"
-            tools:layout_editor_absoluteY="8dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -156,24 +144,10 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:scaleType="centerCrop"
-
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             android:layout_marginEnd="8dp"/>
-
-        <TextView
-            android:id="@+id/tv_post_author2"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Maria Oliveira"
-            android:textColor="#666666"
-            android:textSize="14sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@id/tv_post_title2"
-            app:layout_constraintTop_toBottomOf="@id/tv_post_title2" />
 
         <TextView
             android:id="@+id/tv_post_title2"
@@ -185,30 +159,18 @@
             android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@id/iv_post_image2"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/tv_post_description2"
+            android:id="@+id/tv_post_author2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:text="This is another example of post description..."
+            android:text="Maria Oliveira"
             android:textColor="#666666"
-            android:textSize="12sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@id/tv_post_title2"
-            app:layout_constraintTop_toBottomOf="@id/tv_post_author2" />
-
-        <ImageView
-            android:id="@+id/imageView10"
-            android:layout_width="110dp"
-            android:layout_height="101dp"
-            app:srcCompat="@drawable/mask_group__1_"
-            tools:layout_editor_absoluteX="-18dp"
-            tools:layout_editor_absoluteY="13dp" />
+            app:layout_constraintTop_toBottomOf="@id/tv_post_title2" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
