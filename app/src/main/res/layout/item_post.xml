@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
+    android:padding="8dp"
+    android:layout_marginBottom="8dp">
+
+    <!-- Imagem do Post -->
+    <ImageView
+        android:id="@+id/iv_post_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="8dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tv_post_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Título do Post -->
+    <TextView
+        android:id="@+id/tv_post_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Título do Post"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/iv_post_image"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Autor do Post -->
+    <TextView
+        android:id="@+id/tv_post_author"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Autor do Post"
+        android:textSize="14sp"
+        android:textColor="#666666"
+        app:layout_constraintStart_toStartOf="@id/tv_post_title"
+        app:layout_constraintTop_toBottomOf="@id/tv_post_title"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Descrição do Post -->
+    <TextView
+        android:id="@+id/tv_post_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Descrição do post..."
+        android:textSize="12sp"
+        android:textColor="#666666"
+        app:layout_constraintStart_toStartOf="@id/tv_post_author"
+        app:layout_constraintTop_toBottomOf="@id/tv_post_author"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
