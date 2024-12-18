@@ -23,6 +23,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".CreatePostActivity"></activity>
+        <activity android:name=".PostDetailActivity" />
+
 
     </application>
 

@@ -9,53 +9,138 @@
     android:background="#F9FBFF"
     tools:context=".CreatePostActivity">
 
-    <!-- Campo de entrada para o título do post -->
-    <EditText
-        android:id="@+id/et_title"
+    <TextView
+        android:id="@+id/tv_create_post"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Crie um post"
+        android:textSize="24sp"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_subtitle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="Digite o título do post"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="4dp"
+        android:paddingVertical="8dp"
+        android:text="Compartilhe seu conhecimento com a comunidade de devs pelo mundo!"
+        android:textSize="14sp"
+        android:textColor="#666666"
         app:layout_constraintEnd_toEndOf="parent"
-        android:padding="12dp"
-        android:background="#ffffff"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_create_post" />
 
-    <!-- Campo de entrada para o autor do post -->
+    <TextView
+        android:id="@+id/tv_author_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nome do autor"
+        android:textSize="14sp"
+        android:textColor="#000000"
+        app:layout_constraintTop_toBottomOf="@id/tv_subtitle"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="8dp"/>
+
     <EditText
         android:id="@+id/et_author"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="Digite o nome do autor"
-        app:layout_constraintTop_toBottomOf="@id/et_title"
+        android:textSize="14sp"
+        android:textColor="#000000"
+        android:textColorHint="#AAAAAA"
+        app:layout_constraintTop_toBottomOf="@id/tv_author_label"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:padding="12dp"
         android:background="#ffffff"/>
 
-    <!-- Campo de entrada para a descrição do post -->
+    <TextView
+        android:id="@+id/tv_title_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Título"
+        android:textSize="14sp"
+        android:textColor="#000000"
+        app:layout_constraintTop_toBottomOf="@id/et_author"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <EditText
+        android:id="@+id/et_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Digite o título do post"
+        android:textSize="14sp"
+        android:textColor="#000000"
+        android:textColorHint="#AAAAAA"
+        app:layout_constraintTop_toBottomOf="@id/tv_title_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="12dp"
+        android:background="#ffffff"/>
+
+    <TextView
+        android:id="@+id/tv_description_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Descrição"
+        android:textSize="14sp"
+        android:textColor="#000000"
+        app:layout_constraintTop_toBottomOf="@id/et_title"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="8dp"/>
+
     <EditText
         android:id="@+id/et_description"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="Digite a descrição do post"
+        android:textSize="14sp"
+        android:textColor="#000000"
+        android:textColorHint="#AAAAAA"
         android:minHeight="100dp"
-        app:layout_constraintTop_toBottomOf="@id/et_author"
+        app:layout_constraintTop_toBottomOf="@id/tv_description_label"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:padding="12dp"
         android:background="#ffffff"/>
 
-    <!-- Botão para enviar o post -->
+    <TextView
+        android:id="@+id/tv_image_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Imagem"
+        android:textSize="14sp"
+        android:textColor="#000000"
+        app:layout_constraintTop_toBottomOf="@id/et_description"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <Button
+        android:id="@+id/btn_add_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:text="Envie uma imagem aqui"
+        android:textColor="#1E90FF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_image_hint" />
+
     <Button
         android:id="@+id/btn_submit_post"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Enviar"
+        android:text="Enviar post"
         android:backgroundTint="#1E90FF"
         android:textColor="#FFFFFF"
-        app:layout_constraintTop_toBottomOf="@id/et_description"
+        app:layout_constraintTop_toBottomOf="@id/btn_add_image"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="16dp"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
